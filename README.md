@@ -2,7 +2,7 @@
 
 Badge::Depot::App - Mojo app for hosting some badges
 
-![Requires Perl 5.10+](https://img.shields.io/badge/perl-5.10+-brightgreen.svg) [![Travis status](https://api.travis-ci.org//.svg?branch=master)](https://travis-ci.org//) 
+![Requires Perl 5.10+](https://img.shields.io/badge/perl-5.10+-brightgreen.svg) [![Travis status](https://api.travis-ci.org//.svg?branch=master)](https://travis-ci.org//) ![coverage 100.0%](https://img.shields.io/badge/coverage-100.0%-brightgreen.svg)
 
 # VERSION
 
