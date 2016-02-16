@@ -4,6 +4,7 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
+  - Call String::Random constructor
 
  [Documentation]
 

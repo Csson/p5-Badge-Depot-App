@@ -28,7 +28,7 @@ sub run {
     }
     catch {
         $data_dir = path(my_dist_data('Badge-Depot-App', { create => 1 }));
-        $data_dir->child('mojo.secrets')->spew(String::Random->randpattern('c' x 40));
+        $data_dir->child('mojo.secrets')->spew(String::Random->new->randpattern('c' x 40));
         $data_dir->child('mojo.conf')->spew({ hypnotoad => {} });
         say "Created data directory for Badge-Depot-App";
     };
