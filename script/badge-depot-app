@@ -6,7 +6,7 @@ use warnings;
 # ABSTRACT: Mojo app for hosting Badge::Depot badges
 # AUTHORITY
 # PODNAME: badge-depot-app
-our $VERSION = '0.0011';
+our $VERSION = '0.0012';
 
 use Mojolicious::Lite;
 use Mojo::UserAgent;
