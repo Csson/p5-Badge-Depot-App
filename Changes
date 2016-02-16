@@ -8,7 +8,6 @@ Revision history for Badge-Depot-App
  [Documentation]
 
  [Enhancements]
- - Better message on first run (data dir).
 
  [New Features]
 
@@ -19,6 +18,13 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0004 2016-02-16T19:20:03Z UTC
+ [Enhancements]
+ - Better message on first run (data dir).
+
+ [Stats & Dependency Changes]
+ - 5 files changed, 7 insertions(+), 7 deletions(-)
 
 0.0003 2016-02-16T19:18:02Z UTC
  [Enhancements]
