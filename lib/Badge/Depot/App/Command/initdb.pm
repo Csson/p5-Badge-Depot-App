@@ -5,10 +5,9 @@ use warnings;
 package Badge::Depot::App::Command::initdb;
 
 # AUTHORITY
-our $VERSION = '0.0010';
+our $VERSION = '0.0009';
 
 use Mojo::Base 'Mojolicious::Command';
-use Mojo::JSON qw/encode_json/;
 use Getopt::Long qw/GetOptionsFromArray/;
 use File::HomeDir qw/my_dist_data/;
 use Path::Tiny;
@@ -31,7 +30,7 @@ sub run {
         my_dist_data('Badge-Depot-App', { create => 1 });
         $data_dir = path(my_dist_data('Badge-Depot-App'));
         $data_dir->child('mojo.secrets')->spew(String::Random->new->randpattern('c' x 40));
-        $data_dir->child('mojo.conf')->spew(encode_json({ hypnotoad => {} }));
+        $data_dir->child('mojo.conf')->spew('{ hypnotoad => {} }');
         say "Created data directory for Badge-Depot-App";
     };
 

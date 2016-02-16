@@ -8,6 +8,7 @@ Revision history for Badge-Depot-App
  [Documentation]
 
  [Enhancements]
+ - Spew a string with a hash, not json.
 
  [New Features]
 
