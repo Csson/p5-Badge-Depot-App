@@ -10,7 +10,6 @@ Revision history for Badge-Depot-App
  [Enhancements]
 
  [New Features]
-  - Added Kwalitee badge.
 
  [Other Changes]
 
@@ -19,6 +18,13 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0011 2016-02-16T22:41:10Z UTC
+ [New Features]
+ - Added Kwalitee badge.
+
+ [Stats & Dependency Changes]
+ - 6 files changed, 101 insertions(+), 16 deletions(-)
 
 0.0010 2016-02-16T19:43:02Z UTC
  [Enhancements]
