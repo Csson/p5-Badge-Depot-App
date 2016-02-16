@@ -34,8 +34,10 @@
             "Dist::Iller" : "0.1405",
             "Dist::Iller::Config::Author::CSSON" : "0.0306",
             "Dist::Zilla::Plugin::Authority" : "1.009",
+            "Dist::Zilla::Plugin::BumpVersionAfterRelease::Transitional" : "0",
             "Dist::Zilla::Plugin::ChangeStats::Dependencies::Git" : "0",
             "Dist::Zilla::Plugin::CheckChangesHasContent" : "0",
+            "Dist::Zilla::Plugin::Clean" : "0",
             "Dist::Zilla::Plugin::ConfirmRelease" : "0",
             "Dist::Zilla::Plugin::CopyFilesFromBuild" : "0",
             "Dist::Zilla::Plugin::DistIller::MetaGeneratedBy" : "0",
@@ -45,6 +47,9 @@
             "Dist::Zilla::Plugin::Git::Commit" : "0",
             "Dist::Zilla::Plugin::Git::Contributors" : "0",
             "Dist::Zilla::Plugin::Git::GatherDir" : "0",
+            "Dist::Zilla::Plugin::Git::Push" : "0",
+            "Dist::Zilla::Plugin::Git::Tag" : "0",
+            "Dist::Zilla::Plugin::InstallRelease" : "0",
             "Dist::Zilla::Plugin::License" : "0",
             "Dist::Zilla::Plugin::MakeMaker" : "0",
             "Dist::Zilla::Plugin::Manifest" : "0",
@@ -54,6 +59,7 @@
             "Dist::Zilla::Plugin::MetaProvides::Class" : "0",
             "Dist::Zilla::Plugin::MetaProvides::Package" : "0",
             "Dist::Zilla::Plugin::MetaYAML" : "0",
+            "Dist::Zilla::Plugin::NextRelease::Grouped" : "0",
             "Dist::Zilla::Plugin::PodSyntaxTests" : "0",
             "Dist::Zilla::Plugin::PodWeaver" : "0",
             "Dist::Zilla::Plugin::PodnameFromClassname" : "0",
@@ -117,24 +123,24 @@
    "provides" : {
       "Badge::Depot::App" : {
          "file" : "lib/Badge/Depot/App.pm",
-         "version" : "0.0002"
+         "version" : "0.0001"
       },
       "Badge::Depot::App::Command::initdb" : {
          "file" : "lib/Badge/Depot/App/Command/initdb.pm",
-         "version" : "0.0002"
+         "version" : "0.0001"
       },
       "Badge::Depot::App::Plugin::Badge::CpanTesters" : {
          "file" : "lib/Badge/Depot/App/Plugin/Badge/CpanTesters.pm",
-         "version" : "0.0002"
+         "version" : "0.0001"
       },
       "Badge::Depot::App::Plugin::DB" : {
          "file" : "lib/Badge/Depot/App/Plugin/DB.pm",
-         "version" : "0.0002"
+         "version" : "0.0001"
       }
    },
    "release_status" : "stable",
    "resources" : {},
-   "version" : "0.0002",
+   "version" : "0.0001",
    "x_authority" : "cpan:CSSON"
 }
 

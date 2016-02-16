@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-16 18:12:47 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-16 18:38:57 UTC.
 
 on runtime => sub {
     requires 'perl' => '5.014000';
@@ -20,8 +20,10 @@ on develop => sub {
     requires 'Dist::Iller' => '0.1405';
     requires 'Dist::Iller::Config::Author::CSSON' => '0.0306';
     requires 'Dist::Zilla::Plugin::Authority' => '1.009';
+    requires 'Dist::Zilla::Plugin::BumpVersionAfterRelease::Transitional' => '0';
     requires 'Dist::Zilla::Plugin::ChangeStats::Dependencies::Git' => '0';
     requires 'Dist::Zilla::Plugin::CheckChangesHasContent' => '0';
+    requires 'Dist::Zilla::Plugin::Clean' => '0';
     requires 'Dist::Zilla::Plugin::ConfirmRelease' => '0';
     requires 'Dist::Zilla::Plugin::CopyFilesFromBuild' => '0';
     requires 'Dist::Zilla::Plugin::DistIller::MetaGeneratedBy' => '0';
@@ -31,6 +33,9 @@ on develop => sub {
     requires 'Dist::Zilla::Plugin::Git::Commit' => '0';
     requires 'Dist::Zilla::Plugin::Git::Contributors' => '0';
     requires 'Dist::Zilla::Plugin::Git::GatherDir' => '0';
+    requires 'Dist::Zilla::Plugin::Git::Push' => '0';
+    requires 'Dist::Zilla::Plugin::Git::Tag' => '0';
+    requires 'Dist::Zilla::Plugin::InstallRelease' => '0';
     requires 'Dist::Zilla::Plugin::License' => '0';
     requires 'Dist::Zilla::Plugin::MakeMaker' => '0';
     requires 'Dist::Zilla::Plugin::Manifest' => '0';
@@ -40,6 +45,7 @@ on develop => sub {
     requires 'Dist::Zilla::Plugin::MetaProvides::Class' => '0';
     requires 'Dist::Zilla::Plugin::MetaProvides::Package' => '0';
     requires 'Dist::Zilla::Plugin::MetaYAML' => '0';
+    requires 'Dist::Zilla::Plugin::NextRelease::Grouped' => '0';
     requires 'Dist::Zilla::Plugin::PodSyntaxTests' => '0';
     requires 'Dist::Zilla::Plugin::PodWeaver' => '0';
     requires 'Dist::Zilla::Plugin::PodnameFromClassname' => '0';
