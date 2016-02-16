@@ -4,6 +4,7 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
+  - Spew json, not a hash.
 
  [Documentation]
 
