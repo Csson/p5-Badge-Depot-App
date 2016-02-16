@@ -137,24 +137,24 @@
    "provides" : {
       "Badge::Depot::App" : {
          "file" : "lib/Badge/Depot/App.pm",
-         "version" : "0.0006"
+         "version" : "0.0007"
       },
       "Badge::Depot::App::Command::initdb" : {
          "file" : "lib/Badge/Depot/App/Command/initdb.pm",
-         "version" : "0.0006"
+         "version" : "0.0007"
       },
       "Badge::Depot::App::Plugin::Badge::CpanTesters" : {
          "file" : "lib/Badge/Depot/App/Plugin/Badge/CpanTesters.pm",
-         "version" : "0.0006"
+         "version" : "0.0007"
       },
       "Badge::Depot::App::Plugin::DB" : {
          "file" : "lib/Badge/Depot/App/Plugin/DB.pm",
-         "version" : "0.0006"
+         "version" : "0.0007"
       }
    },
    "release_status" : "stable",
    "resources" : {},
-   "version" : "0.0006",
+   "version" : "0.0007",
    "x_authority" : "cpan:CSSON"
 }
 

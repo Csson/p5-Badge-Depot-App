@@ -4,7 +4,6 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
-  - Call String::Random constructor
 
  [Documentation]
 
@@ -19,6 +18,13 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0007 2016-02-16T19:30:05Z UTC
+ [Bug Fixes]
+ - Call String::Random constructor
+
+ [Stats & Dependency Changes]
+ - 5 files changed, 6 insertions(+), 6 deletions(-)
 
 0.0006 2016-02-16T19:28:18Z UTC
  [Bug Fixes]
