@@ -6,7 +6,7 @@ package Badge::Depot::App;
 
 # ABSTRACT: Mojo app for hosting some badges
 # AUTHORITY
-our $VERSION = '0.0005';
+our $VERSION = '0.0006';
 
 1;
 
