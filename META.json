@@ -104,7 +104,21 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.014000"
+            "CPAN::Testers::WWW::Reports::Parser" : "0",
+            "DateTime" : "0",
+            "File::HomeDir" : "0",
+            "Getopt::Long" : "0",
+            "List::Util" : "0",
+            "Module::Find" : "0",
+            "Mojo::SQLite" : "0",
+            "Mojolicious" : "6.00",
+            "Path::Tiny" : "0",
+            "Safe::Isa" : "0",
+            "String::Random" : "0",
+            "Try::Tiny" : "0",
+            "URL::Encode" : "0",
+            "perl" : "5.010000",
+            "version" : "0"
          }
       },
       "test" : {

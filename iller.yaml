@@ -15,7 +15,21 @@ header:
 prereqs:
   runtime:
     requires:
-      - perl: 5.014000
+      - perl: 5.010000
+      - CPAN::Testers::WWW::Reports::Parser
+      - DateTime
+      - File::HomeDir
+      - Getopt::Long
+      - List::Util
+      - Module::Find
+      - Mojolicious: 6.00
+      - Mojo::SQLite
+      - Path::Tiny
+      - Safe::Isa
+      - String::Random
+      - Try::Tiny
+      - URL::Encode
+      - version
 
 plugins:
   - +config: Author::CSSON

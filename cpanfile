@@ -1,7 +1,21 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-16 18:38:57 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-02-16 18:43:45 UTC.
 
 on runtime => sub {
-    requires 'perl' => '5.014000';
+    requires 'CPAN::Testers::WWW::Reports::Parser' => '0';
+    requires 'DateTime' => '0';
+    requires 'File::HomeDir' => '0';
+    requires 'Getopt::Long' => '0';
+    requires 'List::Util' => '0';
+    requires 'Module::Find' => '0';
+    requires 'Mojo::SQLite' => '0';
+    requires 'Mojolicious' => '6.00';
+    requires 'Path::Tiny' => '0';
+    requires 'Safe::Isa' => '0';
+    requires 'String::Random' => '0';
+    requires 'Try::Tiny' => '0';
+    requires 'URL::Encode' => '0';
+    requires 'perl' => '5.010000';
+    requires 'version' => '0';
 };
 on test => sub {
     requires 'ExtUtils::MakeMaker' => '0';

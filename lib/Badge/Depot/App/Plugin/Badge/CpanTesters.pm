@@ -8,6 +8,7 @@ package Badge::Depot::App::Plugin::Badge::CpanTesters;
 our $VERSION = '0.0001';
 
 use Mojo::Base 'Mojolicious::Plugin';
+use Mojo::JSON qw/encode_json/;
 use Mojo::UserAgent;
 use Try::Tiny;
 use CPAN::Testers::WWW::Reports::Parser;
@@ -15,8 +16,6 @@ use version;
 use Safe::Isa qw/$_isa/;
 use List::Util qw/sum/;
 use URL::Encode qw/url_encode/;
-use Data::Printer;
-use Mojo::JSON qw/encode_json/;
 
 sub register {
     my $self = shift;

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.014000;
+use 5.010000;
 
 use ExtUtils::MakeMaker;
 
@@ -14,9 +14,24 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Badge-Depot-App",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.014000",
+  "MIN_PERL_VERSION" => "5.010000",
   "NAME" => "Badge::Depot::App",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "CPAN::Testers::WWW::Reports::Parser" => 0,
+    "DateTime" => 0,
+    "File::HomeDir" => 0,
+    "Getopt::Long" => 0,
+    "List::Util" => 0,
+    "Module::Find" => 0,
+    "Mojo::SQLite" => 0,
+    "Mojolicious" => "6.00",
+    "Path::Tiny" => 0,
+    "Safe::Isa" => 0,
+    "String::Random" => 0,
+    "Try::Tiny" => 0,
+    "URL::Encode" => 0,
+    "version" => 0
+  },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
@@ -32,11 +47,25 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "CPAN::Testers::WWW::Reports::Parser" => 0,
+  "DateTime" => 0,
   "ExtUtils::MakeMaker" => 0,
+  "File::HomeDir" => 0,
   "File::Spec" => 0,
+  "Getopt::Long" => 0,
   "IO::Handle" => 0,
   "IPC::Open3" => 0,
-  "Test::More" => "0.96"
+  "List::Util" => 0,
+  "Module::Find" => 0,
+  "Mojo::SQLite" => 0,
+  "Mojolicious" => "6.00",
+  "Path::Tiny" => 0,
+  "Safe::Isa" => 0,
+  "String::Random" => 0,
+  "Test::More" => "0.96",
+  "Try::Tiny" => 0,
+  "URL::Encode" => 0,
+  "version" => 0
 );
 
 

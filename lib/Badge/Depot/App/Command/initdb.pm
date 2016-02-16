@@ -21,7 +21,7 @@ sub run {
 
     my $force = 0;
     GetOptionsFromArray $args, 'f|force' => \$force;
-    
+
     my $data_dir;
     try {
         $data_dir = path(my_dist_data('Badge-Depot-App'));
