@@ -6,7 +6,7 @@ use warnings;
 # ABSTRACT: Mojo app for hosting Badge::Depot badges
 # AUTHORITY
 # PODNAME: badge-depot-app
-our $VERSION = '0.0007';
+our $VERSION = '0.0008';
 
 use Mojolicious::Lite;
 use Module::Find qw/findallmod/;
