@@ -23,7 +23,13 @@ sub register {
     my $app = shift;
     my $conf = shift;
 
-    my $dbfile = path(my_dist_data('Badge-Depot-App'))->child('badge_depot_app.db');
+    my $data_dir = path(my_dist_data('Badge-Depot-App'));
+    if(!$data_dir->exists) {
+        warn "It appears you have no data directory. Run 'badge-depot-app' to set it up";
+        return;
+    }
+
+    my $dbfile = $data_dir->child('badge_depot_app.db');
     if(!$dbfile->exists) {
         warn "It appears you have no database. Run 'badge-depot-app initdb' to set it up";
         return;
