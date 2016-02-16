@@ -4,7 +4,6 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
-  - Spew json, not a hash.
 
  [Documentation]
 
@@ -19,6 +18,13 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0009 2016-02-16T19:40:14Z UTC
+ [Bug Fixes]
+ - Spew json, not a hash.
+
+ [Stats & Dependency Changes]
+ - 5 files changed, 7 insertions(+), 6 deletions(-)
 
 0.0008 2016-02-16T19:37:39Z UTC
  [Enhancements]
