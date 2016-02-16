@@ -13,6 +13,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Badge-Depot-App",
+  "EXE_FILES" => [
+    "script/badge-depot-app"
+  ],
   "LICENSE" => "perl",
   "MIN_PERL_VERSION" => "5.010000",
   "NAME" => "Badge::Depot::App",

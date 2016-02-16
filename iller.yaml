@@ -36,7 +36,10 @@ plugins:
     is_private: 1
 
   - +extend_plugin: UploadToStratopan
-    repo: Csson
+    repo: TheFirst
+
+  - +extend_plugin: ExecDir
+    dir: script
 
 ---
 doctype: weaver
