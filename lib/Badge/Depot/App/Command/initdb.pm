@@ -5,7 +5,7 @@ use warnings;
 package Badge::Depot::App::Command::initdb;
 
 # AUTHORITY
-our $VERSION = '0.0009';
+our $VERSION = '0.0010';
 
 use Mojo::Base 'Mojolicious::Command';
 use Mojo::JSON qw/encode_json/;
