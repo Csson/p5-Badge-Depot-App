@@ -12,14 +12,18 @@ use Mojolicious::Lite;
 use Module::Find qw/findallmod/;
 use File::HomeDir qw/my_dist_data/;
 use Path::Tiny;
+use Try::Tiny;
 
 unshift @{ app->plugins->namespaces }  => 'Badge::Depot::App::Plugin';
 unshift @{ app->commands->namespaces } => 'Badge::Depot::App::Command';
 
 plugin 'DB';
-my $data_dir = path(my_dist_data('Badge-Depot-App'));
-app->secrets([split /,/ => $data_dir->child('mojo.secrets')->slurp]);
-plugin Config => { file => $data_dir->child('mojo.conf')->realpath };
+try {
+    my $data_dir = path(my_dist_data('Badge-Depot-App'));
+    app->secrets([split /,/ => $data_dir->child('mojo.secrets')->slurp]);
+    plugin Config => { file => $data_dir->child('mojo.conf')->realpath };
+}
+catch {};
 
 my @badge_plugins = findallmod Badge::Depot::App::Plugin::Badge;
 
