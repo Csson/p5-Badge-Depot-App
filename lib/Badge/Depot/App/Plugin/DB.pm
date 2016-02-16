@@ -77,6 +77,10 @@ sub get_value {
         # check if changed
         else {
             my $refreshed = $current->($dist, $version);
+            if(!defined $refreshed) {
+                $refreshed = { value => 'unknown', color => 'lightgrey' };
+            }
+
             my $value = $refreshed->{'value'};
             my $color = $refreshed->{'color'};
 
@@ -98,6 +102,10 @@ sub get_value {
     # new dist+version+badge
     else {
         my $refreshed = $current->($dist, $version);
+        if(!defined $refreshed) {
+            $refreshed = { value => 'unknown', color => 'lightgrey' };
+        }
+
         my $value = $refreshed->{'value'};
         my $color = $refreshed->{'color'};
 
@@ -131,7 +139,7 @@ sub get_earliest_change_at {
       : $actual_unit eq 'days'   ? (days => 2)
       : $actual_unit eq 'weeks'  ? (weeks => 2)
       : $actual_unit eq 'months' ? (months => 3)
-      :                              (hours => 12)
+      :                            (hours => 12)
     )->strftime('%Y-%m-%d %H:%M:%S');
 
     return ($earliest_change_at, $actual_unit);

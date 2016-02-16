@@ -9,6 +9,7 @@ use warnings;
 our $VERSION = '0.0011';
 
 use Mojolicious::Lite;
+use Mojo::UserAgent;
 use Module::Find qw/findallmod/;
 use File::HomeDir qw/my_dist_data/;
 use Path::Tiny;
@@ -18,6 +19,19 @@ unshift @{ app->plugins->namespaces }  => 'Badge::Depot::App::Plugin';
 unshift @{ app->commands->namespaces } => 'Badge::Depot::App::Command';
 
 plugin 'DB';
+helper render_badge => sub {
+    my $self = shift;
+    my $c = shift;
+    my $badge = shift;
+    my $value = shift;
+    my $color = shift;
+
+    my $url_params = $c->req->params->to_hash;
+    my $qs = scalar keys %{ $url_params } ? '?' . join '&' => map { "$_=$url_params->{ $_ }" } sort { $a cmp $b } keys %{ $url_params } : '';
+
+    return Mojo::UserAgent->new->get("https://img.shields.io/badge/$badge-$value-$color.svg$qs")->res->body;
+};
+
 try {
     my $data_dir = path(my_dist_data('Badge-Depot-App'));
     app->secrets([split /,/ => $data_dir->child('mojo.secrets')->slurp]);

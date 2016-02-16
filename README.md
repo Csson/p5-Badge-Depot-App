@@ -6,7 +6,7 @@ Badge::Depot::App - Mojo app for hosting some badges
 
 # VERSION
 
-Version 0.0010, released 2016-02-16.
+Version 0.0011, released 2016-02-16.
 
 # SYNOPSIS
 

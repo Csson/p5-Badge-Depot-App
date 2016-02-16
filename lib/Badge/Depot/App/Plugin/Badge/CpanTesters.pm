@@ -28,16 +28,13 @@ sub register {
         my $version = $c->param('version');
 
         my $current = $app->db->get_value('cpantesters', {
-            init_expiry => 'seconds',
+            init_expiry => 'hours',
             dist => $dist,
             version => $version,
             current => $self->current,
         });
 
-        my $url_params = $c->req->params->to_hash;
-
-        my $qs = scalar keys %{ $url_params } ? '?' . join '&' => map { "$_=$url_params->{ $_ }" } sort { $a cmp $b } keys %{ $url_params } : '';
-        $c->redirect_to("https://img.shields.io/badge/cpantesters-$current->{'value'}-$current->{'color'}.svg$qs");
+        $c->render(data => $app->render_badge($c, 'cpantesters', $current->{'value'}, $current->{'color'}));
     });
 
     return $app;
@@ -51,9 +48,7 @@ sub current {
         my $version = shift;
         my $first_letter = substr $dist, 0, 1;
 
-        my $unknown = { value => 'unknown', color => 'lightgrey' };
         my $report;
-
         try {
             my $json = Mojo::UserAgent->new->get("http://www.cpantesters.org/distro/$first_letter/$dist.json")->res->json;
             $report = CPAN::Testers::WWW::Reports::Parser->new(
@@ -63,7 +58,7 @@ sub current {
             );
         }
         catch { };
-        return $unknown if !defined $report;
+        return if !defined $report;
 
         if($version eq 'latest') {
             my $latest_version;
@@ -75,7 +70,7 @@ sub current {
             }
             $version = $latest_version;
         }
-        return $unknown if !defined $version || $version eq 'latest';
+        return if !defined $version || $version eq 'latest';
         $version = version->new($version) if !$version->$_isa('version');
 
         my %stats = (
@@ -91,7 +86,7 @@ sub current {
             ++$stats{ $data->status };
         }
 
-        return $unknown if sum(values %stats) == 0;
+        return if sum(values %stats) == 0;
 
         my $ok = $stats{'PASS'};
         my $fails = $stats{'FAIL'};
