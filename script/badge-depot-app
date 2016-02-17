@@ -17,6 +17,7 @@ use Try::Tiny;
 
 unshift @{ app->plugins->namespaces }  => 'Badge::Depot::App::Plugin';
 unshift @{ app->commands->namespaces } => 'Badge::Depot::App::Command';
+app->types->type(svg => 'image/svg+xml');
 
 plugin 'DB';
 helper render_badge => sub {
@@ -29,7 +30,8 @@ helper render_badge => sub {
     my $url_params = $c->req->params->to_hash;
     my $qs = scalar keys %{ $url_params } ? '?' . join '&' => map { "$_=$url_params->{ $_ }" } sort { $a cmp $b } keys %{ $url_params } : '';
 
-    return Mojo::UserAgent->new->get("https://img.shields.io/badge/$badge-$value-$color.svg$qs")->res->body;
+    my $svg = Mojo::UserAgent->new->get("https://img.shields.io/badge/$badge-$value-$color.svg$qs")->res->body;
+    $c->render(format => 'svg', data => $svg);
 };
 
 try {

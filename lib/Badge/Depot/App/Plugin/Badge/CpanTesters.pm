@@ -22,7 +22,7 @@ sub register {
     my $app = shift;
     my $conf = shift;
 
-    return $app->routes->get('/badge/cpantesters/:dist/*version', sub {
+    return $app->routes->get('/badge/cpantesters/:dist/*version' => sub {
         my $c = shift;
         (my $dist = $c->param('dist')) =~ s{::}{-}g;
         my $version = $c->param('version');
@@ -34,7 +34,7 @@ sub register {
             current => $self->current,
         });
 
-        $c->render(data => $app->render_badge($c, 'cpantesters', $current->{'value'}, $current->{'color'}));
+        $app->render_badge($c, 'cpantesters', $current->{'value'}, $current->{'color'});
     });
 
     return $app;

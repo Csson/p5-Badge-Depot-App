@@ -28,7 +28,8 @@ sub register {
             current => $self->current,
         });
 
-        $c->render(data => $app->render_badge($c, 'kwalitee', $current->{'value'}, $current->{'color'}));
+        $app->render_badge($c, 'kwalitee', $current->{'value'}, $current->{'color'});
+        
     });
 
     return $app;
