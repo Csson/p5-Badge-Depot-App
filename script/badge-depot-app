@@ -10,6 +10,7 @@ our $VERSION = '0.0014';
 
 use Mojolicious::Lite;
 use Mojo::UserAgent;
+use Mojo::IOLoop;
 use Module::Find qw/findallmod/;
 use File::HomeDir qw/my_dist_data/;
 use Path::Tiny;
@@ -30,7 +31,23 @@ helper render_badge => sub {
     my $url_params = $c->req->params->to_hash;
     my $qs = scalar keys %{ $url_params } ? '?' . join '&' => map { "$_=$url_params->{ $_ }" } sort { $a cmp $b } keys %{ $url_params } : '';
 
-    my $svg = Mojo::UserAgent->new->get("https://img.shields.io/badge/$badge-$value-$color.svg$qs")->res->body;
+    my $badge_url = "https://img.shields.io/badge/$badge-$value-$color.svg$qs";
+
+    my $results = $self->db->query(q{
+        SELECT badge_svg
+          FROM shield
+         WHERE badge_url = ?}, $badge_url);
+
+    my $row = $results->hash;
+    my $svg;
+    if($row) {
+        $svg = $row->{'badge_svg'};
+    }
+    else {
+        $svg = Mojo::UserAgent->new->get("https://img.shields.io/badge/$badge-$value-$color.svg$qs")->res->body;
+        $self->db->query(q{INSERT INTO shield (badge_url, badge_svg) VALUES (?, ?)}, $badge_url, $svg);
+    }
+
     $c->render(format => 'svg', data => $svg);
 };
 
@@ -48,10 +65,9 @@ for my $plugin (@badge_plugins) {
     plugin $plugin;
 }
 
-get '/*' => sub {
+any '/*any' => { any => '' } => sub {
     my $c = shift;
-    my $whatev = $c->param('whatev');
-    $c->reply->not_found;
+    $c->render(inline => qq{<!DOCTYPE html><html><head><title>Badge::Depot</title></head><body><p>See <a href="https://metacpan.org/pod/Badge::Depot::App">Badge::Depot::App</a>.</p></body></html>});
 };
 
 app->start;

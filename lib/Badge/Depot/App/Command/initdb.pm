@@ -60,6 +60,12 @@ sub run {
             change_unit TEXT NOT NULL
         )
     });
+    $sqlite->db->query(q{
+        CREATE TABLE shield (
+            badge_url TEXT NOT NULL PRIMARY KEY,
+            badge_svg TEXT NOT NULL
+        )
+    });
     say sprintf 'Has created %s', $db->realpath;
 
 }

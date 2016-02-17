@@ -70,11 +70,11 @@ sub get_value {
 
     my $row = $results->hash;
     if($row) {
-        # no check (too early)
+        # don't check yet
         if($row->{'earliest_change_at'} gt $now) {
             return { value => $row->{'value'}, color => $row->{'color'} };
         }
-        # check if changed
+        # check current
         else {
             my $refreshed = $current->($dist, $version);
             if(!defined $refreshed) {
@@ -130,8 +130,9 @@ sub get_earliest_change_at {
     my $next_expiry = $current_expiry_index == $#expiries ? $change_unit : $expiries[ $current_expiry_index + 1];
 
     my $actual_unit = !defined $previous_value          ? 'hours'
+                    : !defined $current_value           ? 'hours'
                     : $previous_value eq $current_value ? $next_expiry
-                    :                                     'hours'
+                    :                                     $change_unit
                     ;
 
     my $earliest_change_at = DateTime->now->add(
@@ -139,11 +140,16 @@ sub get_earliest_change_at {
       : $actual_unit eq 'days'   ? (days => 2)
       : $actual_unit eq 'weeks'  ? (weeks => 2)
       : $actual_unit eq 'months' ? (months => 3)
-      :                            (hours => 12)
+      :                            (days => 2)
     )->strftime('%Y-%m-%d %H:%M:%S');
 
     return ($earliest_change_at, $actual_unit);
 
+}
+
+# pass it on
+sub query {
+    shift->db->query(@_);
 }
 
 1;

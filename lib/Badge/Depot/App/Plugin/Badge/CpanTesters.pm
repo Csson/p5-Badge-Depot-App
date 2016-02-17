@@ -53,7 +53,6 @@ sub current {
 
         my $report;
         try {
-
             $report = CPAN::Testers::WWW::Reports::Parser->new(
                 format => 'JSON',
                 objects => 1,
