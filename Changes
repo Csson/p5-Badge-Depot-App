@@ -6,7 +6,6 @@ Revision history for Badge-Depot-App
  [Bug Fixes]
 
  [Documentation]
-  - Added some documentation.
 
  [Enhancements]
 
@@ -19,6 +18,14 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0014 2016-02-17T12:52:32Z UTC
+ [Documentation]
+ - Added some documentation.
+
+ [Stats & Dependency Changes]
+ - 8 files changed, 192 insertions(+), 132 deletions(-)
+ - (dev req) - Pod::Weaver::Section::Badges
 
 0.0013 2016-02-17T01:07:30Z UTC
  [Bug Fixes]
