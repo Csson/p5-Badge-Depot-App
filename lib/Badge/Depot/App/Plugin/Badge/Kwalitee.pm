@@ -29,7 +29,7 @@ sub register {
         });
 
         $app->render_badge($c, 'kwalitee', $current->{'value'}, $current->{'color'});
-        
+
     });
 
     return $app;
