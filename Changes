@@ -4,6 +4,7 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
+  - Fix CpanTesters badge if we don't have a json object.
 
  [Documentation]
 

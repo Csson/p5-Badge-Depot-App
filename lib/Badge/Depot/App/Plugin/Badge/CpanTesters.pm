@@ -48,9 +48,12 @@ sub current {
         my $version = shift;
         my $first_letter = substr $dist, 0, 1;
 
+        my $json = Mojo::UserAgent->new->get("http://www.cpantesters.org/distro/$first_letter/$dist.json")->res->json;
+        return if !defined $json;
+
         my $report;
         try {
-            my $json = Mojo::UserAgent->new->get("http://www.cpantesters.org/distro/$first_letter/$dist.json")->res->json;
+
             $report = CPAN::Testers::WWW::Reports::Parser->new(
                 format => 'JSON',
                 objects => 1,
