@@ -2,7 +2,7 @@ use 5.10.0;
 use strict;
 use warnings;
 
-package Badge::Depot::App::Plugin::Badge::CpanTesters;
+package Badge::Depot::App::Plugin::Badge::Cpantesters;
 
 # AUTHORITY
 our $VERSION = '0.0014';
