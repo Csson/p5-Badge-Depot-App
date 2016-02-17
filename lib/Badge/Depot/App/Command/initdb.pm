@@ -5,7 +5,7 @@ use warnings;
 package Badge::Depot::App::Command::initdb;
 
 # AUTHORITY
-our $VERSION = '0.0013';
+our $VERSION = '0.0014';
 
 use Mojo::Base 'Mojolicious::Command';
 use Getopt::Long qw/GetOptionsFromArray/;
