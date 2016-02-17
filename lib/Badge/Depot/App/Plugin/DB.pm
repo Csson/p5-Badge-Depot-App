@@ -5,7 +5,7 @@ use warnings;
 package Badge::Depot::App::Plugin::DB;
 
 # AUTHORITY
-our $VERSION = '0.0012';
+our $VERSION = '0.0013';
 
 use Mojo::Base 'Mojolicious::Plugin';
 use File::HomeDir qw/my_dist_data/;
