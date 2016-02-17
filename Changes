@@ -4,7 +4,6 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
-  - Fixed badge mime type.
 
  [Documentation]
 
@@ -19,6 +18,13 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0013 2016-02-17T01:07:30Z UTC
+ [Bug Fixes]
+ - Fixed badge mime type.
+
+ [Stats & Dependency Changes]
+ - 6 files changed, 13 insertions(+), 10 deletions(-)
 
 0.0012 2016-02-17T00:43:57Z UTC
  [Bug Fixes]
