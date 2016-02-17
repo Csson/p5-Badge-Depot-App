@@ -83,7 +83,6 @@
             "Pod::Weaver::Plugin::Transformer" : "0",
             "Pod::Weaver::PluginBundle::CorePrep" : "0",
             "Pod::Weaver::Section::Authors" : "0",
-            "Pod::Weaver::Section::Badges" : "0",
             "Pod::Weaver::Section::Collect" : "0",
             "Pod::Weaver::Section::Generic" : "0",
             "Pod::Weaver::Section::Homepage::DefaultCPAN" : "0",
@@ -139,28 +138,28 @@
    "provides" : {
       "Badge::Depot::App" : {
          "file" : "lib/Badge/Depot/App.pm",
-         "version" : "0.0013"
+         "version" : "0.0014"
       },
       "Badge::Depot::App::Command::initdb" : {
          "file" : "lib/Badge/Depot/App/Command/initdb.pm",
-         "version" : "0.0013"
+         "version" : "0.0014"
       },
-      "Badge::Depot::App::Plugin::Badge::CpanTesters" : {
-         "file" : "lib/Badge/Depot/App/Plugin/Badge/CpanTesters.pm",
-         "version" : "0.0013"
+      "Badge::Depot::App::Plugin::Badge::Cpantesters" : {
+         "file" : "lib/Badge/Depot/App/Plugin/Badge/Cpantesters.pm",
+         "version" : "0.0014"
       },
       "Badge::Depot::App::Plugin::Badge::Kwalitee" : {
          "file" : "lib/Badge/Depot/App/Plugin/Badge/Kwalitee.pm",
-         "version" : "0.0013"
+         "version" : "0.0014"
       },
       "Badge::Depot::App::Plugin::DB" : {
          "file" : "lib/Badge/Depot/App/Plugin/DB.pm",
-         "version" : "0.0013"
+         "version" : "0.0014"
       }
    },
    "release_status" : "stable",
    "resources" : {},
-   "version" : "0.0013",
+   "version" : "0.0014",
    "x_authority" : "cpan:CSSON"
 }
 

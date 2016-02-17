@@ -2,21 +2,48 @@
 
 Badge::Depot::App - Mojo app for hosting some badges
 
-![Requires Perl 5.10+](https://img.shields.io/badge/perl-5.10+-brightgreen.svg) [![Travis status](https://api.travis-ci.org//.svg?branch=master)](https://travis-ci.org//) ![coverage 100.0%](https://img.shields.io/badge/coverage-100.0%-brightgreen.svg)
-
 # VERSION
 
-Version 0.0013, released 2016-02-17.
+Version 0.0014, released 2016-02-17.
 
 # SYNOPSIS
 
-    use Badge::Depot::App;
+    $ cpanm Badge::Depot::App
+    $ badge-depot-app initdb
+    $ hypnotoad path/to/badge-depot-app
 
 # DESCRIPTION
 
-Badge::Depot::App is
+`badge-depot-app` is a [Mojolicious](https://metacpan.org/pod/Mojolicious) application for hosting a few [Badge::Depot](https://metacpan.org/pod/Badge::Depot) badges. An instance is running at
+[https://badgedepot.code301.com](https://badgedepot.code301.com). It is only necessary to run this application if you wish to host your own badges.
+
+It uses a SQLite database to cache information fetched from data sources.
+
+# COMMANDS
+
+## initdb
+
+    $ badge-depot-app initdb
+
+This command creates the data directory (by using `my_dist_data` in [File::HomeDir](https://metacpan.org/pod/File::HomeDir)) where the database and configuration
+files are stored.
+
+To re-create the database (for instance after an incompatible upgrade):
+
+    $ badge-depot-app initdb --force
+
+# HOSTED BADGES
+
+The following badges are hosted by this application:
+
+- [Badge::Depot::App::Plugin::Badge::Cpantesters](https://metacpan.org/pod/Badge::Depot::App::Plugin::Badge::Cpantesters)
+- [Badge::Depot::App::Plugin::Badge::Kwalitee](https://metacpan.org/pod/Badge::Depot::App::Plugin::Badge::Kwalitee)
 
 # SEE ALSO
+
+- [Badge::Depot](https://metacpan.org/pod/Badge::Depot)
+- [Task::Badge::Depot](https://metacpan.org/pod/Task::Badge::Depot)
+- [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges)
 
 # SOURCE
 

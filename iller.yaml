@@ -47,5 +47,7 @@ doctype: weaver
 plugins:
   - +config: Author::CSSON
 
+  - +remove_plugin: Badges
+
 ---
 doctype: cpanfile
