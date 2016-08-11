@@ -4,7 +4,7 @@ Badge::Depot::App - Mojo app for hosting some badges
 
 # VERSION
 
-Version 0.0014, released 2016-02-17.
+Version 0.0015, released 2016-08-11.
 
 # SYNOPSIS
 
@@ -47,11 +47,11 @@ The following badges are hosted by this application:
 
 # SOURCE
 
-[https://github.com/Csson/p5-Badge-Depot-App](https://github.com/Csson/p5-Badge-Depot-App)
+L<>
 
 # HOMEPAGE
 
-[https://metacpan.org/release/Badge-Depot-App](https://metacpan.org/release/Badge-Depot-App)
+L<>
 
 # AUTHOR
 
@@ -63,3 +63,15 @@ This software is copyright (c) 2016 by Erik Carlsson.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
+
+# POD ERRORS
+
+Hey! **The above document had some coding errors, which are explained below:**
+
+- Around line 75:
+
+    An empty L<>
+
+- Around line 79:
+
+    An empty L<>

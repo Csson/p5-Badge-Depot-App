@@ -4,6 +4,7 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
+ - Fixed Kwalitee badge by adapting to cpants changes (url now contains 'author').
 
  [Documentation]
 
