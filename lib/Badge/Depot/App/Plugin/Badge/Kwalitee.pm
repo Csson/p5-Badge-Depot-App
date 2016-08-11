@@ -16,15 +16,17 @@ sub register {
     my $app = shift;
     my $conf = shift;
 
-    return $app->routes->get('/badge/kwalitee/:dist/*version', sub {
+    return $app->routes->get('/badge/kwalitee/:author/:dist/*version', sub {
         my $c = shift;
         (my $dist = $c->param('dist')) =~ s{::}{-}g;
         my $version = $c->param('version');
+        my $author = $c->param('author');
 
         my $current = $app->db->get_value('kwalitee', {
             init_expiry => 'hours',
             dist => $dist,
             version => $version,
+            author => $author,
             current => $self->current,
         });
 
@@ -39,20 +41,20 @@ sub current {
     my $self = shift;
 
     return sub {
-        my $dist = shift;
-        my $version = shift;
+        my $info = shift;
+        my $dist = $info->{'dist'};
+        my $version = $info->{'version'};
+        my $author = $info->{'author'};
 
-        my $urldist = $version eq 'latest' ? $dist : "$dist-$version";
-
-        my $tx = Mojo::UserAgent->new->get("http://cpants.cpanauthors.org/dist/$urldist.json");
-
+        my $tx = Mojo::UserAgent->new->get("http://cpants.cpanauthors.org/release/$author/$dist-$version.json");
+warn "http://cpants.cpanauthors.org/release/$author/$dist-$version.json";
         if(!$tx->success) {
             return;
         }
 
         my $data = $tx->res->json;
-        my $core_kwalitee = $data->{'dist'}{'core_kwalitee'};
-        my $kwalitee = $data->{'dist'}{'kwalitee'};
+        my $core_kwalitee = $data->{'distribution'}{'core_kwalitee'};
+        my $kwalitee = $data->{'distribution'}{'kwalitee'};
 
         my $color = $core_kwalitee == 100 && $kwalitee > 130   ? 'brightgreen'
                   : $kwalitee >= 128                           ? 'green'
