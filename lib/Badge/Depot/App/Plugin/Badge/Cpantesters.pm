@@ -44,8 +44,9 @@ sub current {
     my $self = shift;
 
     return sub {
-        my $dist = shift;
-        my $version = shift;
+        my $info = shift;
+        my $dist = $info->{'dist'};
+        my $version = $info->{'version'};
         my $first_letter = substr $dist, 0, 1;
 
         my $json = Mojo::UserAgent->new->get("http://www.cpantesters.org/distro/$first_letter/$dist.json")->res->json;
