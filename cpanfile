@@ -1,4 +1,4 @@
-# This file was auto-generated from iller.yaml by Dist::Iller on 2016-08-11 21:26:10 UTC.
+# This file was auto-generated from iller.yaml by Dist::Iller on 2016-08-11 21:44:00 UTC.
 
 on runtime => sub {
     requires 'CPAN::Testers::WWW::Reports::Parser' => '0';
@@ -84,7 +84,6 @@ on develop => sub {
     requires 'Pod::Weaver::PluginBundle::CorePrep' => '0';
     requires 'Pod::Weaver::Section::Authors' => '0';
     requires 'Pod::Weaver::Section::Collect' => '0';
-    requires 'Pod::Weaver::Section::GenerateSection' => '1.01';
     requires 'Pod::Weaver::Section::Generic' => '0';
     requires 'Pod::Weaver::Section::Leftovers' => '0';
     requires 'Pod::Weaver::Section::Legal' => '0';

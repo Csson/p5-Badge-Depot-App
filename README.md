@@ -45,14 +45,6 @@ The following badges are hosted by this application:
 - [Task::Badge::Depot](https://metacpan.org/pod/Task::Badge::Depot)
 - [Pod::Weaver::Section::Badges](https://metacpan.org/pod/Pod::Weaver::Section::Badges)
 
-# SOURCE
-
-L<>
-
-# HOMEPAGE
-
-L<>
-
 # AUTHOR
 
 Erik Carlsson <info@code301.com>
@@ -63,15 +55,3 @@ This software is copyright (c) 2016 by Erik Carlsson.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 75:
-
-    An empty L<>
-
-- Around line 79:
-
-    An empty L<>
