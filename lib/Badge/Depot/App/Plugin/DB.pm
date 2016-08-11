@@ -76,7 +76,7 @@ sub get_value {
         }
         # check current
         else {
-            my $refreshed = $current->($dist, $version);
+            my $refreshed = $current->($info);
             if(!defined $refreshed) {
                 $refreshed = { value => 'unknown', color => 'lightgrey' };
             }
@@ -101,7 +101,7 @@ sub get_value {
     }
     # new dist+version+badge
     else {
-        my $refreshed = $current->($dist, $version);
+        my $refreshed = $current->($info);
         if(!defined $refreshed) {
             $refreshed = { value => 'unknown', color => 'lightgrey' };
         }
