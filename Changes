@@ -4,7 +4,6 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
- - Fixed Kwalitee badge by adapting to cpants changes (url now contains 'author').
 
  [Documentation]
 
@@ -19,6 +18,58 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0015 2016-08-11T21:45:09Z UTC
+ [Bug Fixes]
+ - Fixed Kwalitee badge by adapting to cpants changes (url now contains
+   'author').
+
+ [Stats & Dependency Changes]
+ - 7 files changed, 24 insertions(+), 19 deletions(-)
+ - (run req) ~ DateTime (any) --> 1.05
+ - (run req) ~ List::Util (any) --> 1.45
+ - (run req) ~ Path::Tiny (any) --> 0.072
+ - (run req) ~ Safe::Isa (any) --> 1.000005
+ - (run req) ~ Try::Tiny (any) --> 0.24
+ - (run req) ~ version (any) --> 0.9913
+ - (dev req) + Dist::Zilla 5.000
+ - (dev req) + Dist::Zilla::Plugin::Git 2.036
+ - (dev req) + Dist::Zilla::Plugin::MetaConfig (any)
+ - (dev req) + Test::EOF (any)
+ - (dev req) + Test::Version 1
+ - (dev req) ~ Dist::Zilla::Plugin::BumpVersionAfterRelease::Transitional
+   (any) --> 0.007
+ - (dev req) ~ Dist::Zilla::Plugin::ChangeStats::Dependencies::Git (any)
+   --> 0.0100
+ - (dev req) ~ Dist::Zilla::Plugin::CheckChangesHasContent (any) --> 0.008
+ - (dev req) ~ Dist::Zilla::Plugin::Clean (any) --> 0.07
+ - (dev req) ~ Dist::Zilla::Plugin::CopyFilesFromBuild (any) --> 0.151680
+ - (dev req) ~ Dist::Zilla::Plugin::Git::Contributors (any) --> 0.017
+ - (dev req) ~ Dist::Zilla::Plugin::InstallRelease (any) --> 0.008
+ - (dev req) ~ Dist::Zilla::Plugin::MetaProvides::Package (any) -->
+   2.003001
+ - (dev req) ~ Dist::Zilla::Plugin::NextRelease::Grouped (any) --> 0.0200
+ - (dev req) ~ Dist::Zilla::Plugin::PodWeaver (any) --> 4.006
+ - (dev req) ~ Dist::Zilla::Plugin::ReadmeAnyFromPod (any) --> 0.150250
+ - (dev req) ~ Dist::Zilla::Plugin::RunExtraTests (any) --> 0.028
+ - (dev req) ~ Dist::Zilla::Plugin::Test::Compile (any) --> 2.054
+ - (dev req) ~ Dist::Zilla::Plugin::Test::EOF (any) --> 0.0501
+ - (dev req) ~ Dist::Zilla::Plugin::Test::EOL (any) --> 0.18
+ - (dev req) ~ Dist::Zilla::Plugin::Test::Kwalitee::Extra (any) --> v0.2.1
+ - (dev req) ~ Dist::Zilla::Plugin::Test::NoTabs (any) --> 0.15
+ - (dev req) ~ Dist::Zilla::Plugin::Test::ReportPrereqs (any) --> 0.021
+ - (dev req) ~ Dist::Zilla::Plugin::Test::Version (any) --> 1.05
+ - (dev req) ~ Dist::Zilla::Plugin::TravisYML (any) --> 1.15
+ - (dev req) ~ Dist::Zilla::Plugin::UploadToStratopan (any) --> 0.012
+ - (dev req) ~ Test::NoTabs (any) --> 1.4
+ - (dev req) ~ Test::Warnings (any) --> 0.026
+ - (dev req) - Dist::Zilla::Plugin::MetaProvides::Class
+ - (dev req) - Dist::Zilla::Plugin::PodnameFromClassname
+ - (dev req) - Dist::Zilla::Plugin::Prereqs::Plugins
+ - (dev req) - Pod::Weaver::Section::Homepage::DefaultCPAN
+ - (dev req) - Pod::Weaver::Section::Source::DefaultGitHub
+ - (dev sug) ~ Dist::Iller 0.1406 --> 0.1408
+ - (dev sug) ~ Dist::Iller::Config::Author::CSSON 0.0306 --> 0.0310
 
 0.0014 2016-02-17T12:52:32Z UTC
  [Documentation]
