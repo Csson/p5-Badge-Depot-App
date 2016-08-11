@@ -48,6 +48,8 @@ plugins:
   - +config: Author::CSSON
 
   - +remove_plugin: Badges
+  - +remove_plugin: SOURCE
+  - +remove_plugin: HOMEPAGE
 
 ---
 doctype: cpanfile
