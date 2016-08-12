@@ -5,7 +5,7 @@ use warnings;
 package Badge::Depot::App::Plugin::Badge::Cpantesters;
 
 # AUTHORITY
-our $VERSION = '0.0016';
+our $VERSION = '0.0017';
 
 use Mojo::Base 'Mojolicious::Plugin';
 use Mojo::JSON qw/encode_json/;
