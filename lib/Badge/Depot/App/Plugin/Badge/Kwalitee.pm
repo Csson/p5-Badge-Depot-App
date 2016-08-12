@@ -16,7 +16,7 @@ sub register {
     my $app = shift;
     my $conf = shift;
 
-    return $app->routes->get('/badge/kwalitee/:author/:dist/*version', sub {
+    $app->routes->get('/badge/kwalitee/:author/:dist/*version', sub {
         my $c = shift;
         (my $dist = $c->param('dist')) =~ s{::}{-}g;
         my $version = $c->param('version');
@@ -34,6 +34,12 @@ sub register {
 
     });
 
+    # keep the old url for now, but render 'unknown' for all
+    $app->routes->get('/badge/kwalitee/:dist/*version', sub {
+        my $c = shift;
+        $app->render_badge($c, 'kwalitee', 'unknown', 'lightgrey');
+    });
+
     return $app;
 }
 
@@ -47,7 +53,7 @@ sub current {
         my $author = $info->{'author'};
 
         my $tx = Mojo::UserAgent->new->get("http://cpants.cpanauthors.org/release/$author/$dist-$version.json");
-warn "http://cpants.cpanauthors.org/release/$author/$dist-$version.json";
+
         if(!$tx->success) {
             return;
         }

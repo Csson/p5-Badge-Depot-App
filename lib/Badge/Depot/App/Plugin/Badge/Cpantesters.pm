@@ -22,7 +22,7 @@ sub register {
     my $app = shift;
     my $conf = shift;
 
-    return $app->routes->get('/badge/cpantesters/:dist/*version' => sub {
+    $app->routes->get('/badge/cpantesters/:dist/*version' => sub {
         my $c = shift;
         (my $dist = $c->param('dist')) =~ s{::}{-}g;
         my $version = $c->param('version');
