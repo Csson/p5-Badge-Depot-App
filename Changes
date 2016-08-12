@@ -4,6 +4,7 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
+ - Render old kwalitee badges (without author in url) as 'unknown', rather than not rendering at all.
 
  [Documentation]
 
