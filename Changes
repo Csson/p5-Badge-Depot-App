@@ -1,7 +1,29 @@
 Revision history for Badge-Depot-App
 
 {{$NEXT}}
- No changes.
+ [API Changes]
+
+ [Bug Fixes]
+
+ [Documentation]
+
+ [Enhancements]
+
+ [New Features]
+
+ [Other Changes]
+
+ [Requirements]
+
+ [Stats & Dependency Changes]
+
+ [Testing]
+
+0.0017 2016-08-12T10:17:43Z UTC
+ - No changes.
+
+ [Stats & Dependency Changes]
+ - 6 files changed, 9 insertions(+), 7 deletions(-)
 
 0.0016 2016-08-12T09:37:38Z UTC
  [Bug Fixes]
