@@ -4,7 +4,6 @@ Revision history for Badge-Depot-App
  [API Changes]
 
  [Bug Fixes]
- - Render old kwalitee badges (without author in url) as 'unknown', rather than not rendering at all.
 
  [Documentation]
 
@@ -19,6 +18,16 @@ Revision history for Badge-Depot-App
  [Stats & Dependency Changes]
 
  [Testing]
+
+0.0016 2016-08-12T09:37:38Z UTC
+ [Bug Fixes]
+ - Render old kwalitee badges (without author in url) as 'unknown', rather
+   than not rendering at all.
+
+ [Stats & Dependency Changes]
+ - 6 files changed, 15 insertions(+), 9 deletions(-)
+ - (dev req) + Dist::Zilla::Plugin::PromptIfStale (any)
+ - (dev sug) ~ Dist::Iller::Config::Author::CSSON 0.0310 --> 0.0311
 
 0.0015 2016-08-11T21:45:09Z UTC
  [Bug Fixes]
